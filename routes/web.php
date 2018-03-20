@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/Historia/Tops');
 });
 
 
 // ROTAS -> USUARIO
-Route::group(['prefix'=>'Usuario','as'=>'site'],function(){
+Route::group(['prefix'=>'Usuario','as'=>'usuario'],function(){
     // Route::get("topseries", "HistoriaController@topStories");
 
 
@@ -27,10 +27,12 @@ Route::group(['prefix'=>'Usuario','as'=>'site'],function(){
 });
 
 // ROTAS -> HISTORIAS
-Route::group(['prefix'=>'Historia','as'=>'site'],function(){
+Route::group(['prefix'=>'Historia','as'=>'historia'],function(){
     // Route::get("topseries", "HistoriaController@topStories");
 
-	Route::get("teste", "HistoriaController@teste");
+	Route::get("Tops", "HistoriaController@Tops");
+	Route::get("Melhores", "HistoriaController@Melhores");
+	Route::get("Novos", "HistoriaController@Novos");
 
     //API
     Route::get("newseries", "HistoriaController@newStories");

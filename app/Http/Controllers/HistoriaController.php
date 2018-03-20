@@ -8,8 +8,14 @@ class HistoriaController extends GeralController
 {
 
 
-	public function teste(){
-		return View("/Historia/melhores", array());		
+	public function Melhores(){
+		return View("/Historia/Melhores", array());		
+	}
+	public function Novos(){
+		return View("/Historia/Novos", array());		
+	}
+	public function Tops(){
+		return View("/Historia/Top", array());		
 	}
 
  // API
@@ -30,4 +36,26 @@ class HistoriaController extends GeralController
 		$response = $this->getWS("/topstories.json?print=pretty");
 		return $response;
 	}
+
+	public function askstories(){
+
+		$response = $this->getWS("/askstories.json?print=pretty");
+		return $response;
+
+	}
+
+	public function showstories(){
+
+		$response = $this->getWS("/showstories.json?print=pretty");
+		return $response;
+
+	}
+
+	public function jobstories(){
+
+		$response = $this->getWS("/jobstories.json?print=pretty");
+		return $response;
+
+	}
+	
 }

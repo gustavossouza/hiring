@@ -70,6 +70,7 @@
   <script src="{!! asset('/js/jquery.easing.min.js') !!}"></script>
   <!-- Custom scripts for all pages-->
   <script src="{!! asset('/js/sb-admin.min.js') !!}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		@yield('scripts')
   </div>
 

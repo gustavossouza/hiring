@@ -11,7 +11,7 @@
  <li class="breadcrumb-item">
    <a href="index.html">História</a>
  </li>
- <li class="breadcrumb-item active">Melhores</li>
+ <li class="breadcrumb-item active">Tops</li>
 </ol>
 
 @stop
@@ -19,9 +19,9 @@
 
 @section('conteudo')
  <div class="table-responsive">
-  <table class="table table-bordered table-hover">
+  <table class="table table-bordered table-hovero">
    <tr>
-    <th>asdas</th>
+    <th>asdasd</th>
     <th>asdasd2</th>
     <th>asdasd3</th>
     <th>asdasd4</th>
@@ -33,6 +33,7 @@
 
 
 @section('scripts')
+
 
 
 @stop
