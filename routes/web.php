@@ -30,6 +30,7 @@ Route::group(['prefix'=>'Usuario','as'=>'site'],function(){
 Route::group(['prefix'=>'Historia','as'=>'site'],function(){
     // Route::get("topseries", "HistoriaController@topStories");
 
+	Route::get("teste", "HistoriaController@teste");
 
     //API
     Route::get("newseries", "HistoriaController@newStories");

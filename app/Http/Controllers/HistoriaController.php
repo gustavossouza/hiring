@@ -8,6 +8,9 @@ class HistoriaController extends GeralController
 {
 
 
+	public function teste(){
+		return View("/Historia/melhores", array());		
+	}
 
  // API
  public function bestStories(){
