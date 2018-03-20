@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// ROTAS -> USUARIO
+Route::group(['prefix'=>'Usuario','as'=>'site'],function(){
+    // Route::get("topseries", "HistoriaController@topStories");
+
+
+    //API
+    Route::get("ConsultUser", "UsuarioController@consultarUsuario");
+
+});
+
 // ROTAS -> HISTORIAS
 Route::group(['prefix'=>'Historia','as'=>'site'],function(){
     // Route::get("topseries", "HistoriaController@topStories");

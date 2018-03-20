@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class HistoriaController extends GeralController
 {
+
+
+
+ // API
  public function bestStories(){
 
 		$response = $this->getWS("/beststories.json?print=pretty");
