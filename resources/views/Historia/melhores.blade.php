@@ -18,11 +18,11 @@
 
 
 @section('conteudo')
- <div class="table-responsive">
+ <div class="table-responsive" id="app-4">
   <table class="table table-bordered table-hover">
    <tr>
     <th>asdas</th>
-    <th>asdasd2</th>
+    <th><%message%></th>
     <th>asdasd3</th>
     <th>asdasd4</th>
     <th>asdasd5</th>
@@ -33,6 +33,5 @@
 
 
 @section('scripts')
-
-
+ <script type="text/javascript" src="{!! asset('/VueJS/testes.js') !!}"></script>
 @stop
