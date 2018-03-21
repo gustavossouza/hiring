@@ -18,5 +18,14 @@ class UsuarioController extends GeralController
 		return $result; 
 	}
 
+	public function ultimoProfile(){
+		$response = $this->getws("/updates.json?print=pretty");
+		if($response){
+			$json = json_decode($response);
+			$json = $json->profiles;
+		}
+		return json_encode($json);
+	}
+
 
 }

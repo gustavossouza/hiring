@@ -37,25 +37,26 @@ class HistoriaController extends GeralController
 		return $response;
 	}
 
-	public function askstories(){
+	public function askStories(){
 
 		$response = $this->getWS("/askstories.json?print=pretty");
 		return $response;
 
 	}
 
-	public function showstories(){
+	public function showStories(){
 
 		$response = $this->getWS("/showstories.json?print=pretty");
 		return $response;
 
 	}
 
-	public function jobstories(){
+	public function jobStories(){
 
 		$response = $this->getWS("/jobstories.json?print=pretty");
 		return $response;
 
 	}
+
 	
 }

@@ -21,4 +21,10 @@ class GeralController extends Controller
 
   return $response;
 	}
+
+	public function totalInfo(){
+		$response = $this->getWS("/maxitem.json?print=pretty");
+		return $response;
+	}
+	
 }
