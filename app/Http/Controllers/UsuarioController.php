@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 class UsuarioController extends GeralController
 {
     
-	public function consultarUsuario(Request $form){
-		if($form["name"]){
-			$name = $form["name"];
+	public function consultarUsuario($name){
+		if($name){
 			$result = $this->getWS("/user/{$name}.json?print=pretty");
 		}else{
 			$result = "Por favor selecionar o cliente!";
@@ -18,13 +17,24 @@ class UsuarioController extends GeralController
 		return $result; 
 	}
 
-	public function ultimoProfile(){
+	public function ultimoProfileAtualizacoes(){
 		$response = $this->getws("/updates.json?print=pretty");
+		$resultado = array();
 		if($response){
 			$json = json_decode($response);
-			$json = $json->profiles;
+			$count = 0;
+			foreach ($json->profiles as $item) {
+				
+				if($count == 5)
+					break;
+
+				$resultadoConsulta = $this->consultarUsuario($item);
+				array_push($resultado, json_decode($resultadoConsulta));
+
+				$count = $count + 1;
+			}
 		}
-		return json_encode($json);
+		return $resultado;
 	}
 
 

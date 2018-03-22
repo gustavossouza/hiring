@@ -27,8 +27,8 @@ class GeralController extends Controller
 		return $response;
 	}
 
-	public function consultarInformacao($url){
-		$response = $this->getWS($url);
+	public function consultarInformacao($item){
+		$response = $this->getWS("/item/{$item}.json?print=pretty");
 		return $response;
 	}
 	

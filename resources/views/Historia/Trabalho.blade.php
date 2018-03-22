@@ -1,5 +1,5 @@
 @extends('Shared._Layout')
-@section('titulo','Melhores Historias')
+@section('titulo','Trabalho Historias')
 @section('css')
 
 
@@ -11,7 +11,7 @@
  <li class="breadcrumb-item">
    <a href="index.html">História</a>
  </li>
- <li class="breadcrumb-item active">Tops</li>
+ <li class="breadcrumb-item active">Trabalho</li>
 </ol>
 
 @stop
@@ -25,19 +25,17 @@
    	<th>Por:</th>
    	<th>Titulo:</th>
     <th>Descendentes</th>
-    <th>Crianças</th>
     <th>Pontos</th>
     <th>Tempo</th>
     <th>Tipo</th>
    </tr>
    <tr>
-   	<td>16648270</td>
-   	<td>rbanffy</td>
-   	<td><a href="https://gizmodo.com/a-visiting-star-jostled-our-solar-system-70-000-years-a-1823954398" target="_blank">A Visiting Star Jostled Our Solar System 70,000 Years Ago</a></td>
+   	<td>16649135</td>
+   	<td>saranshk</td>
+   	<td><a href="https://www.wisdomgeek.com/web-development/how-react-relay-graphql-stick-together/" target="_blank">How React, Relay, and GraphQL Fit Together</a></td>
     <td>18</td>
-    <td>array</td>
-    <td>71</td>
-    <td>1521724098</td>
+    <td>1</td>
+    <td>1521730322</td>
     <td>Story</td>
    </tr>
   </table>

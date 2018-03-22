@@ -17,6 +17,12 @@ class HistoriaController extends GeralController
 	public function Tops(){
 		return View("/Historia/Top", array());		
 	}
+	public function Trabalhos(){
+		return View("/Historia/Trabalho", array());		
+	}
+	public function Mostrar(){
+		return View("/Historia/Mostrar", array());		
+	}
 
  // API
  public function bestStories(){
@@ -30,7 +36,7 @@ class HistoriaController extends GeralController
 			if($count == 5)
 				break;
 
-			$responseConsulta = $this->consultarInformacao("/item/{$item}.json?print=pretty");
+			$responseConsulta = $this->consultarInformacao($item);
 			array_push($resultado, json_decode($responseConsulta));
 			$count = $count + 1;
 		}
@@ -49,7 +55,7 @@ class HistoriaController extends GeralController
 			if($count == 5)
 				break;
 
-			$responseConsulta = $this->consultarInformacao("/item/{$item}.json?print=pretty");
+			$responseConsulta = $this->consultarInformacao($item);
 			array_push($resultado, json_decode($responseConsulta));
 			$count = $count + 1;
 		}
@@ -68,7 +74,7 @@ class HistoriaController extends GeralController
 			if($count == 5)
 				break;
 
-			$responseConsulta = $this->consultarInformacao("/item/{$item}.json?print=pretty");
+			$responseConsulta = $this->consultarInformacao($item);
 			array_push($resultado, json_decode($responseConsulta));
 			$count = $count + 1;
 		}
@@ -76,24 +82,7 @@ class HistoriaController extends GeralController
 		return $resultado;
 	}
 
-	public function askStories(){
-		$response = $this->getWS("/askstories.json?print=pretty");
-		$jsonResponse = json_decode($response);
-		$resultado = array();
-
-		$count = 0;
-		foreach ($jsonResponse as $item) {
-				
-			if($count == 5)
-				break;
-
-			$responseConsulta = $this->consultarInformacao("/item/{$item}.json?print=pretty");
-			array_push($resultado, json_decode($responseConsulta));
-			$count = $count + 1;
-			}
-
-		return $resultado;
-	}
+	/* -- */
 
 	public function showStories(){
 		$response = $this->getWS("/showstories.json?print=pretty");
@@ -106,7 +95,7 @@ class HistoriaController extends GeralController
 			if($count == 5)
 				break;
 
-			$responseConsulta = $this->consultarInformacao("/item/{$item}.json?print=pretty");
+			$responseConsulta = $this->consultarInformacao($item);
 			array_push($resultado, json_decode($responseConsulta));
 			$count = $count + 1;
 		}
@@ -125,7 +114,7 @@ class HistoriaController extends GeralController
 			if($count == 5)
 				break;
 
-			$responseConsulta = $this->consultarInformacao("/item/{$item}.json?print=pretty");
+			$responseConsulta = $this->consultarInformacao($item);
 			array_push($resultado, json_decode($responseConsulta));
 			$count = $count + 1;
 		}
@@ -133,5 +122,26 @@ class HistoriaController extends GeralController
 		return $resultado;
 	}
 
+	/* -- */
+
+	public function ultimoItemAtualizacoes(){
+		$response = $this->getws("/updates.json?print=pretty");
+		$resultado = array();
+		if($response){
+			$json = json_decode($response);
+			$count = 0;
+			foreach ($json->items as $item) {
+				
+				if($count == 5)
+					break;
+
+				$resultadoConsulta = $this->consultarInformacao($item);
+				array_push($resultado, json_decode($resultadoConsulta));
+
+				$count = $count + 1;
+			}
+		}
+		return $resultado;
+	}
 	
 }
