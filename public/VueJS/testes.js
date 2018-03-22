@@ -1,7 +1,15 @@
-var app4 = new Vue({
-	el: '#app-4',
-	data: {
-		message: 'asdas12321312'
-	}
+new Vue({
+  el: 'body',
+  data: {
+  },
+  ready: function(){
+  	this.teste();
+  },
+  methods: {
+  	teste: function(){
+  		this.$http.get("/Historia/newseries").then(function(dados){
+ 				console.log(dados.data);
+  		});
+  	}
+  }
 });
-Vue.config.delimiters = ['<%', '%>'];

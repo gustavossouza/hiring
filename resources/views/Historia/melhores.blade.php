@@ -18,11 +18,11 @@
 
 
 @section('conteudo')
- <div class="table-responsive" id="app-4">
+ <div class="table-responsive">
   <table class="table table-bordered table-hover">
    <tr>
     <th>asdas</th>
-    <th><%message%></th>
+    <th>aa</th>
     <th>asdasd3</th>
     <th>asdasd4</th>
     <th>asdasd5</th>

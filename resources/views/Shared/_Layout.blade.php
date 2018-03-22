@@ -70,7 +70,8 @@
   <script src="{!! asset('/js/jquery.easing.min.js') !!}"></script>
   <!-- Custom scripts for all pages-->
   <script src="{!! asset('/js/sb-admin.min.js') !!}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.27/vue.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.0/vue-resource.min.js"></script>
 		@yield('scripts')
   </div>
 
