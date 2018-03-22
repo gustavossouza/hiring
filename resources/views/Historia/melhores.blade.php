@@ -18,27 +18,18 @@
 
 
 @section('conteudo')
- <div class="table-responsive melhoresStories">
+ <div class="table-responsive">
   <table class="table table-bordered table-hover">
    <tr>
     <th>Código</th>
     <th>Por:</th>
     <th>Titulo:</th>
     <th>Descendentes</th>
-    <th>Crianças</th>
     <th>Pontos</th>
     <th>Tempo</th>
     <th>Tipo</th>
    </tr>
-   <tr v-for="item in info">
-    <td>16628347</td>
-    <td>coloneltcb</td>
-    <td><a href="https://www.bloomberg.com/news/articles/2018-03-20/ftc-said-to-be-probing-facebook-for-use-of-personal-data">FTC Probing Facebook for Use of Personal Data, Source Says</a></td>
-    <td>368</td>
-    <td>array</td>
-    <td>1103</td>
-    <td>1521552658</td>
-    <td>story</td>
+   <tr is="app-melhores">
    </tr>
   </table>
  </div>

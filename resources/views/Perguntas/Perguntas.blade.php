@@ -19,28 +19,18 @@
 
 @section('conteudo')
  <div class="table-responsive">
-  <table class="table table-bordered table-hovero">
+  <table class="table table-bordered table-hover">
    <tr>
     <th>Código</th>
-   	<th>Por:</th>
-    <th>Titulo:</th>
-   	<th>Texto:</th>
+   	<th>Por</th>
+    <th width="30%">Titulo</th>
+   	<th width="10%">Texto</th>
     <th>Descendentes</th>
     <th>Pontos</th>
-    <th>Crianças</th>
     <th>Tempo</th>
     <th>Tipo</th>
    </tr>
-   <tr>
-   	<td>16649338</td>
-   	<td>sir_brickalot</td>
-    <td>Ask HN: Where to go after deleting Facebook?</td>
-   	<td>Facebook for me is mainly a self updating address book. So is there any other recommended service that could possibly even import all or some of my FB data and is able to help keep in touch with my acquantances?"</td>
-    <td>2</td>
-    <td>4</td>
-    <td>Array</td>
-    <td>1521731874</td>
-    <td>Story</td>
+   <tr is="app-perguntas">
    </tr>
   </table>
  </div>

@@ -19,8 +19,7 @@ Route::get("maxItem", "GeralController@totalInfo");
 
 // ROTAS -> USUARIO
 Route::group(['prefix'=>'Usuario','as'=>'usuario'],function(){
-    // Route::get("topseries", "HistoriaController@topStories");
-
+    Route::get("UltimoAtualizacoes", "UsuarioController@UltimoAtualizacoes");
 
     //API
     Route::get("ConsultUser", "UsuarioController@consultarUsuario");

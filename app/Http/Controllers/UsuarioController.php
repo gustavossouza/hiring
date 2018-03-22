@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class UsuarioController extends GeralController
 {
     
+	public function UltimoAtualizacoes(){
+		return View("/Usuario/UltimosPerfis");
+	}
+
 	public function consultarUsuario($name){
 		if($name){
 			$result = $this->getWS("/user/{$name}.json?print=pretty");

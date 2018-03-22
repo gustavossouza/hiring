@@ -35,7 +35,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="Usuarios">
             <li>
-              <a href="login.html">Lista</a>
+              <a href="/Usuario/UltimoAtualizacoes">Última atualizações</a>
             </li>
           </ul>
         </li>
