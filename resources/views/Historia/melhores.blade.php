@@ -18,7 +18,7 @@
 
 
 @section('conteudo')
- <div class="table-responsive">
+ <div class="table-responsive melhoresStories">
   <table class="table table-bordered table-hover">
    <tr>
     <th>Código</th>
@@ -30,7 +30,7 @@
     <th>Tempo</th>
     <th>Tipo</th>
    </tr>
-   <tr>
+   <tr v-for="item in info">
     <td>16628347</td>
     <td>coloneltcb</td>
     <td><a href="https://www.bloomberg.com/news/articles/2018-03-20/ftc-said-to-be-probing-facebook-for-use-of-personal-data">FTC Probing Facebook for Use of Personal Data, Source Says</a></td>
@@ -46,5 +46,5 @@
 
 
 @section('scripts')
- <script type="text/javascript" src="{!! asset('/VueJS/testes.js') !!}"></script>
+ <script type="text/javascript" src="{!! asset('/VueJS/Historia.js') !!}"></script>
 @stop

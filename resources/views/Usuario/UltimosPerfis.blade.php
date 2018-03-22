@@ -48,5 +48,5 @@
 
 
 @section('scripts')
- <script type="text/javascript" src="{!! asset('/VueJS/Pergunta.js') !!}"></script>
+ <script type="text/javascript" src="{!! asset('/VueJS/Usuario.js') !!}"></script>
 @stop

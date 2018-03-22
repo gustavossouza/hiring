@@ -44,7 +44,5 @@
 
 
 @section('scripts')
-
-
-
+ <script type="text/javascript" src="{!! asset('/VueJS/Historia.js') !!}"></script>
 @stop
